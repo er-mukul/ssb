@@ -1,0 +1,40 @@
+package com.ssbguide.backend.domainobjects;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="SSB_Center")
+public class SSBCenterInformation {
+
+	/**
+	 *   Fields------------------------------------------------------------------
+	 */
+	@Id
+	@Column(name="Id")
+	@GeneratedValue
+	private Long id;
+	
+	@Column(name="PageHeading")
+	private String pageHeading;
+	
+	@Column(name="Center_Name")
+	private String centerName;
+	
+	@Column(name="Center_Id")
+	private String centerId;
+	
+	@OneToMany
+	@JoinColumn(name="SSB_Center_Id")
+	private List<TouristPlace> placesVisit;
+	
+	@Column(name="Center_Location")
+	private String centerLocation;
+}

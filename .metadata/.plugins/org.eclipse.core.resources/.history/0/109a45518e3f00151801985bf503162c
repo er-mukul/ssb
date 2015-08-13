@@ -1,0 +1,5 @@
+package com.ssbguide.backend.domainobjects;
+
+public class SSBCenterInformation {
+
+}

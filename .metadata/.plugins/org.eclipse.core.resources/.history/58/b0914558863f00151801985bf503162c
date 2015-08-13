@@ -1,0 +1,24 @@
+package com.ssbguide.backend.domainobjects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="MenuItems")
+public class MenuItems {
+
+	@Id
+	@Column(name="Id")
+	@GeneratedValue
+	private Long id;
+	
+	@Column(name="ItemName")
+	private String itemName;
+	
+	@Column(name="Item_Id")
+	private Long itemId;
+	
+}
